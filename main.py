@@ -1,9 +1,9 @@
 from transformers import pipeline
-from openpyxl import load_workbook
+
 
 classifier = pipeline("sentiment-analysis",   
                       "blanchefort/rubert-base-cased-sentiment")
-
+from openpyxl import load_workbook
 Book = load_workbook("Train.xlsx")
 
 rev_sheet = Book["Rev"]
